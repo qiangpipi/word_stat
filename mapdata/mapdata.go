@@ -11,7 +11,7 @@ type Dobj struct {
 func NewDobj() Dobj {
 	var d Dobj
 	d.Data = make(map[string]int)
-	d.Queue = make(chan string, 100)
+	d.Queue = make(chan string, 1000)
 	go d.writeToMap()
 	return d
 }
